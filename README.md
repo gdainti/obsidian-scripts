@@ -24,6 +24,21 @@ Removes `[[wiki-style]]` link brackets if the linked note does not exist, leavin
 python remove_empty_links.py <file.md>
 ```
 
+### Remove Tag (`remove_tag.py`)
+
+Removes a specified tag from all markdown files in a given folder. It handles tags in YAML frontmatter (e.g., `daily`, `#daily`, `"#daily"`) and in the body of the text (e.g., `#daily`).
+
+**Usage:**
+```bash
+python remove_tag.py <folder_path> <tag_name>
+```
+
+**Example:**
+```bash
+python remove_tag.py "~/notes" daily
+```
+This command will remove all instances of the `daily` tag from markdown files in the `~/notes` directory.
+
 ### Reorder Table Columns (`reorder_columns.py`)
 
 Reorders columns in a Markdown table.
