@@ -1,6 +1,6 @@
 # Obsidian Scripts
 
-A collection of Python scripts to automate common tasks for managing Obsidian notes.
+A collection of Python scripts to automate common tasks for managing [Obsidian](httpss://obsidian.md/) notes.
 
 ## Scripts
 
