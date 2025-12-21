@@ -1,6 +1,6 @@
 # Obsidian Scripts
 
-A collection of Python scripts to automate common tasks for managing [Obsidian](httpss://obsidian.md/) notes.
+A collection of Python scripts to automate common tasks for managing [Obsidian](https://obsidian.md/) notes.
 
 ## Scripts
 
@@ -75,6 +75,15 @@ Splits a markdown file containing a table into separate files for each year, bas
 **Usage:**
 ```bash
 python split_by_year.py <file.md>
+```
+
+### Check YAML Frontmatter (`check_yaml_frontmatter.py`)
+
+Scans all Markdown files in a directory to identify which files are missing a YAML frontmatter block (`--- ... ---`). It prints counts of files with and without frontmatter and lists the specific files that are missing it.
+
+**Usage:**
+```bash
+python check_yaml_frontmatter.py <folder_path>
 ```
 
 ## License
