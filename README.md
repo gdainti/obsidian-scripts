@@ -37,7 +37,20 @@ python remove_tag.py <folder_path> <tag_name>
 ```bash
 python remove_tag.py "~/notes" daily
 ```
-This command will remove all instances of the `daily` tag from markdown files in the `~/notes` directory.
+
+### Rename Frontmatter Key (`rename_frontmatter_key.py`)
+
+Renames a specified key in the YAML frontmatter of all markdown files within a given folder and its subfolders. The script will output the names of the files it has modified.
+
+**Usage:**
+```bash
+python rename_frontmatter_key.py <folder_path> <old_key_name> <new_key_name>
+```
+
+**Example:**
+```bash
+python rename_frontmatter_key.py "~/notes/daily" date created
+```
 
 ### Reorder Table Columns (`reorder_columns.py`)
 
