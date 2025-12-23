@@ -99,6 +99,17 @@ Scans all Markdown files in a directory to identify which files are missing a YA
 python check_yaml_frontmatter.py <folder_path>
 ```
 
+### Reduce Image Size (`reduce_image_size.py`)
+
+Reduces the size of JPG/JPEG images in a specified folder by reducing their quality. It can recursively scan subdirectories. This is useful for optimizing images for web use or just saving space.
+
+**Usage:**
+```bash
+python reduce_image_size.py <folder_path> [options]
+```
+*   `--quality <1-100>`: Set the image quality (default: 85).
+*   `--min-size <KB>`: Skip files smaller than this size in kilobytes (default: 100).
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
