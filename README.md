@@ -15,6 +15,15 @@ python convert_date_format.py <file.md> [options]
 *   Use `-f <format>` to specify the output format (e.g., `YYYY-MM-DD`).
 *   Run with `-h` for more options.
 
+### Find Duplicate Notes (`find_duplicate_notes.py`)
+
+Scans a folder for Markdown files that have identical content, ignoring the YAML frontmatter. This is useful for finding notes that have been accidentally duplicated but might have different metadata.
+
+**Usage:**
+```bash
+python find_duplicate_notes.py <folder_path> [options]
+```
+
 ### Remove Empty Links (`remove_empty_links.py`)
 
 Removes `[[wiki-style]]` link brackets if the linked note does not exist, leaving just the text.
@@ -109,6 +118,16 @@ python reduce_image_size.py <folder_path> [options]
 ```
 *   `--quality <1-100>`: Set the image quality (default: 85).
 *   `--min-size <KB>`: Skip files smaller than this size in kilobytes (default: 100).
+
+### Plot Value Over Time (`plot_value_over_time.py`)
+
+Scans a folder for markdown files, extracts a numerical property and its corresponding date from the frontmatter. It displays statistics like all-time highs/lows and recent changes, then prints a simple text-based plot of the value over time to the console.
+
+**Usage:**
+```bash
+python plot_value_over_time.py <folder_path> [options]
+```
+*   `--prop <property_name>`: Specify the numerical frontmatter property to plot (default: `v`).
 
 ## License
 
