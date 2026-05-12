@@ -129,6 +129,17 @@ python plot_value_over_time.py <folder_path> [options]
 ```
 *   `--prop <property_name>`: Specify the numerical frontmatter property to plot (default: `v`).
 
+### Remove Frontmatter Key (`remove_frontmatter_key.py`)
+
+Removes a specified key and its associated value from the YAML frontmatter of all markdown files within a given folder and its subfolders. This is useful for bulk-cleaning metadata that is no longer needed.
+
+**Usage:**
+```bash
+python remove_frontmatter_key.py <folder_path> <key_name>
+```
+
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
