@@ -138,7 +138,46 @@ Removes a specified key and its associated value from the YAML frontmatter of al
 python remove_frontmatter_key.py <folder_path> <key_name>
 ```
 
+### Move Frontmatter Links (`move_frontmatter_links.py`)
 
+Extracts links from the frontmatter `links` property (e.g., `[[daily notes]]` or `"[[daily notes]]"`), removes the `links` property from the frontmatter, and moves the links to a new line right after the closing frontmatter `---` separator. Multiple links are placed on a single line separated by spaces (e.g., `[[bwf]] [[AWS SES]]`). If a link already exists elsewhere in the file, it is not duplicated.
+
+**Example Transformation:**
+
+*Before:*
+```markdown
+---
+tags:
+links:
+  - "[[bwf]]"
+  - "[[AWS SES]]"
+created: 2026-09-19 11:15
+aliases:
+---
+```
+
+*After:*
+```markdown
+---
+tags:
+created: 2026-09-19 11:15
+aliases:
+---
+[[bwf]] [[AWS SES]]
+```
+
+**Usage:**
+```bash
+python move_frontmatter_links.py <folder_path> [options]
+```
+*   `--key <property_name>`: Specify the frontmatter property to move (default: `links`).
+*   `--multiline`: Put each link on its own separate line instead of space-separated on one line.
+*   `--dry-run`: Preview changes without modifying files.
+
+**Example:**
+```bash
+python move_frontmatter_links.py "~/notes"
+```
 
 ## License
 
